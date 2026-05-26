@@ -1,0 +1,15 @@
+{
+  "Express Route": {
+    "prefix": "exroute",
+    "body": [
+      "router.${1:get}('/${2:path}', async (req, res) => {",
+      "  try {",
+      "    const result = await ${3:service}();",
+      "    res.json(result);",
+      "  } catch (err) {",
+      "    res.status(500).json({ error: err.message });",
+      "  }",
+      "});",
+    ],
+  },
+}
